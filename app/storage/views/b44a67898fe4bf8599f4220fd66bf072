@@ -1,0 +1,52 @@
+
+<?php $__env->startSection('title'); ?>
+Projek Akhir WEB II
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<a href="<?php echo URL::to('/boking/tambah'); ?>" class="btn btn-primary">
+    <i class="glyphicon glyphicon-plus"></i>
+    Tambah
+</a>
+<br/>
+<br/>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Form View Boking
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Waktu Boking</th>
+            <th>Lama Main/Jam</th>
+            <th>Harga</th>
+            <th>AKSI</th>
+        </tr>
+        <?php foreach ($boking as $val) { ?>
+            <tr>
+                <td><?php echo $val['id'];; ?></td>
+                <td><?php echo $val['waktu'];; ?></td>
+                <td><?php echo $val['lama_main'];; ?></td>
+                <td><?php echo $val['harga'];; ?></td>
+                
+                
+                
+                <td>
+                    <a href="<?php echo URL::to('/boking/ubah/'.$val['id']);; ?>" class="btn btn-info">
+                        <i class="glyphicon glyphicon-edit"></i>
+                        Ubah
+                    </a>
+                    <a href="<?php echo URL::to('/boking/hapus/'.$val['id']);; ?>" class="btn btn-danger">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        Hapus
+                    </a>
+                </td>
+            </tr>
+        <?php } ?>
+    </table>
+    <div class="panel-footer"></div>
+</div>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layout.bootstrap3.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

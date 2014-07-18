@@ -1,0 +1,14 @@
+<?php $__env->startSection('content'); ?><br>
+<div class="container">
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <img src="<?php echo URL::to('images/images.jpg'); ?>" width="1000" height="500" >
+    </div>
+
+</div>
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('layout.bootstrap3.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,8 @@
+<?php $__env->startSection('content'); ?><br>
+<a href="" class="btn btn-primary"> Tombol Tes</a>
+</br>
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('layout.bootstrap3.index', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
